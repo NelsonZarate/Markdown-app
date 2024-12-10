@@ -1,0 +1,7 @@
+services:
+  markodwn-app:
+    image: nginx
+    volumes: 
+      - ./src/index.html:/usr/share/nginx/html/index.html
+    ports: 
+      - "8080:80"
