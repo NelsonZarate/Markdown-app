@@ -1,8 +1,38 @@
-<html>
-    <title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Markdown File Editor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Markdown Text File Editor</h1>
+  </header>
 
-    </title>
-    <body style bgcolor="purple">
-        
-    </body>
+  <div class="container">
+    <!-- Input Area -->
+    <textarea id="markdown-input" placeholder="Write Here.."></textarea>
+    <!-- Rendered Markdown Preview -->
+    <div id="markdown-preview"></div>
+  </div>
+
+  <br>
+  
+  <div class="text-center">
+    <button class="btn">Download .md file</button>
+  </div>
+
+  <br><br><br>
+  <footer>
+    <p>Made by Lucas Cleminson, Nelson Zarate, Sabrina Elaouar</p>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+</body>
 </html>

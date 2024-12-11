@@ -6,7 +6,7 @@ build:
 
 
 run: build
-	docker run -p 8080:80 -v $(shell pwd)/src/index.html:/usr/share/nginx/html/index.html nginx
+	docker run -p 8080:80 -v $(shell pwd)/src/:/usr/share/nginx/html/ nginx
 
 up:
 	docker compose up
