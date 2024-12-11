@@ -1,77 +1,47 @@
- /* General Styles */
 body {
     margin: 0;
-    padding: 20px;
-    background-color: #1e1e2f; /* Dark background */
-    color: #e4e4eb; /* Light text */
-    font-family: 'Space Mono', monospace; /* Space Mono for everything */
-  }
+    padding: 0;
+    background-color: #1f1e1e;
+    color: #ffffff;
+    font-family: 'Cabin', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 header h1 {
+    background-color: #1E1E1E;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem;
-    color: #f8f9fa; /* Light text */
-  }
-
-.container {
-    display: flex;
-    gap: 20px; /* Space between input and preview */
-    justify-content: center;
+    padding: 15px;
+    color: #adc1c2;
+    font-family: 'Cabin', sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-textarea#markdown-input {
-    background-color: #2a2d3e; /* Darker background */
-    color: #e4e4eb; /* Light text */
-    width: 40%;
-    height: 400px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #4b4e69; /* Subtle border */
-    border-radius: 6px;
-    box-sizing: border-box;
-    resize: none; /* Prevent resizing */
-    font-family: 'Space Mono', monospace; /* Monospace font */
-}
-
-#markdown-preview {
-    background-color: #2a2d3e; /* Darker background */
-    color: #e4e4eb; /* Light text */
-    border: 1px solid #4b4e69; /* Subtle border */
-    border-radius: 6px;
-    width: 40%;
-    height: 400px;
-    padding: 10px;
-    overflow-y: auto;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    font-family: 'Space Mono', monospace; /* Monospace font */
-    box-sizing: border-box;
-}
-
-  /* Markdown Header Styles */
 #markdown-preview h1 {
     font-size: 1.8rem;
     margin: 0.5em 0;
-    color: #ff7f50; /* Coral */
+    color: #32c3dc; /* Coral */
 }
 
 #markdown-preview h2 {
     font-size: 1.5rem;
     margin: 0.5em 0;
-    color: #ffa07a; /* Light Coral */
+    color: #6ed2e8; /* Light Coral */
 }
 
 #markdown-preview h3 {
     font-size: 1.3rem;
     margin: 0.5em 0;
-    color: #ffd700; /* Gold */
+    color: #aecbea; /* Gold */
 }
 
 #markdown-preview p {
     font-size: 1rem;
     margin: 0.5em 0;
-    color: #e4e4eb;
+    color: #ebf3f7;
 }
 
   /* Code Block Styling */
@@ -92,21 +62,75 @@ code {
     border-radius: 4px;
 }
 
-.text-center button {
-    background-color: #ff7f50; /* Coral */
-    color: #1e1e2f; /* Dark text */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 1rem;
+.editor-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.text-center button:hover {
-    background-color: #ffa07a; /* Light Coral */
-    color: #1e1e2f;
+textarea#markdown-input {
+    background-color: #1E1E1E;
+    /* Darker background */
+    color: #e4e4eb;
+    /* Light text */
+    border: 1px solid #1f4541;
+    /* Subtle border */
+    width: 40%;
+    height: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: none;
+    /* Prevent resizing */
+    font-family: 'Space Mono', monospace;
+    /* Monospace font */
+}
+
+#markdown-preview {
+    background-color: #1E1E1E;
+    /* Darker background */
+    color: #e4e4eb;
+    /* Light text */
+    border: 1px solid #1f4541;
+    /* Subtle border */
+    border-radius: 6px;
+    width: 40%;
+    height: 400px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    font-family: 'Space Mono', monospace;
+    /* Monospace font */
+    box-sizing: border-box;
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #46d9f0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1b9a95;
 }
 
 footer {
-    padding: 20px;
     text-align: center;
+    color: #B0B0B0;
+    padding: 20px;
+}
+
+textarea#markdown-input:focus {
+    border-color: #0beaee;
+    outline: none;
 }

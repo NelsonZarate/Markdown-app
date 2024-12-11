@@ -4,35 +4,34 @@
   <meta charset="utf-8">
   <title>Markdown File Editor</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Cabin:wght@400;500;600&display=swap" rel="stylesheet"> <!-- Added Cabin font -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+
   <header>
-    <h1>Markdown Text File Editor</h1>
+    <h1>Markdown File Text Editor</h1>
   </header>
+  <!-- text editor -->
+  <div class="editor-container">
+    <textarea name="inputText" id="markdown-input" placeholder="Write Here.."></textarea>
 
-  <div class="container">
-    <!-- Input Area -->
-    <textarea id="markdown-input" placeholder="Write Here.."></textarea>
-    <!-- Rendered Markdown Preview -->
-    <div id="markdown-preview"></div>
+    <!-- preview -->
+    <div 
+        id="markdown-preview">
+    </div>
   </div>
-
-  <br>
   
+  <br>
   <div class="text-center">
-    <button class="btn">Download .md file</button>
+    <button type="button" class="btn" id="downloadBtn">Download .md</button>
   </div>
-
-  <br><br><br>
-  <footer>
-    <p>Made by Lucas Cleminson, Nelson Zarate, Sabrina Elaouar</p>
-  </footer>
   
   <script src="script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  
+  <footer>
+    <p>Made by Lucas Cleminson, Nelson Zarate, Sabrina Elaouar</p>
+  </footer>
 </body>
 </html>
