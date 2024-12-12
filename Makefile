@@ -2,7 +2,7 @@ bash:
 	docker run -it nginx bash
 
 build:
-	docker build -t nginx -f ./ops/Dockerfile .
+	docker build -t custom-nginx -f ./ops/Dockerfile .
 
 
 run: build

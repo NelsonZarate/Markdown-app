@@ -1,13 +1,40 @@
+// Text to Markdown Format script
 const input = document.getElementById('markdown-input');
 const preview = document.getElementById('markdown-preview');
 
 input.addEventListener('input', () => {
   const markdownText = input.value;
   const htmlContent = marked.marked(markdownText);
-  preview.innerHTML = htmlContent; // Use innerHTML to display the rendered content
+  preview.innerHTML = htmlContent; 
 });
 
 
+// Scroll sync script
+let isScrollingFromInput = false;
+let isScrollingFromPreview = false;
+
+input.addEventListener('scroll', () => {
+  if (isScrollingFromPreview) return; 
+  isScrollingFromInput = true;
+
+  const scrollRatio = input.scrollTop / (input.scrollHeight - input.clientHeight);
+  preview.scrollTop = scrollRatio * (preview.scrollHeight - preview.clientHeight);
+
+  isScrollingFromInput = false;
+});
+
+preview.addEventListener('scroll', () => {
+  if (isScrollingFromInput) return; 
+  isScrollingFromPreview = true;
+
+  const scrollRatio = preview.scrollTop / (preview.scrollHeight - preview.clientHeight);
+  input.scrollTop = scrollRatio * (input.scrollHeight - input.clientHeight);
+
+  isScrollingFromPreview = false;
+});
+
+
+// Download button script
 var saveData = (function () {
   var a = document.createElement("a");
   document.body.appendChild(a);
@@ -23,18 +50,8 @@ var saveData = (function () {
 })();
 
 
-var markdownInput = document.getElementById("markdown-input");
-var previewContainer = document.getElementById("markdown-preview");
-
-markdownInput.addEventListener("input", function () {
-
-  var markdownText = markdownInput.value;
-  previewContainer.innerHTML = marked(markdownText);
-});
-
-// Handle download button click
 document.getElementById('downloadBtn').addEventListener('click', function() {
-  var markdownContent = markdownInput.value;
-  var fileName = "document.md";
+  var markdownContent = input.value;
+  var fileName = "Markdown.md";
   saveData(markdownContent, fileName);
 });

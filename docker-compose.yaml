@@ -2,7 +2,7 @@ services:
   markodwn-app:
     build:
       context: .
-      dockerfile: ops/DDockerfile
+      dockerfile: ops/Dockerfile
     #image: nginx
     volumes: 
       - ./src/:/usr/share/nginx/html/
